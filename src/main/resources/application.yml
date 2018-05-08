@@ -1,0 +1,31 @@
+server:
+  port: 8888
+  # tomcat设置
+  tomcat:
+    accesslog:
+    # 开启日志访问
+      enabled: true
+    # 日志保存路径
+      directory: E://  
+      
+logging:
+  level:
+    com:
+      example:
+        dao: debug
+        
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      max-active: 8
+      max-wait: 1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+#    集群配置
+#    cluster: 
+#      nodes: 127.0.0.1:7000,127.0.0.1:7001,127.0.0.1:7002
+#      maxRedirects: 6
